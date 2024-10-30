@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+body > div {
+  font-family: "Anton", sans-serif;
+  position: relative;
+  background: linear-gradient(
+    to right,
+    blue,
+    red 50%,
+    transparent 50%,
+    transparent
+  );
+  font-size: 4rem;
+  /* font-weight: bold; */
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 20px 40px;
+  -webkit-text-stroke: 0.3px white;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  background-position: 100% 50%;
+  transition: background-position 1s ease-in-out, -webkit-text-stroke 1s linear;
+  cursor: default;
+  /* border: 1px solid white;
+  border-left: none;
+  border-right: none; */
+  text-align: center;
+}
+
+body > div:hover {
+  background-position: 0;
+  -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0);
+}
+
+body > div:hover > .bar {
+  left: calc(100% - 10px);
+  /* transform: translateX(-100%); */
+}
+
+div > .bar {
+  height: 100%;
+  width: 10px;
+  background: linear-gradient(to right, blue, blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* transform: translateX(-100%); */
+  transition: left 1s ease-in-out;
+}
